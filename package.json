@@ -1,33 +1,24 @@
 {
-  "name": "fingerprintjs2",
-  "version": "1.1.1",
-  "description": "Modern & flexible browser fingerprinting library",
-  "main": "dist/fingerprint2.min.js",
-  "devDependencies": {
-    "gulp": "^3.8.11",
-    "eslint": "^0.14.1",
-    "gulp-eslint": "^0.4.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.1.0"
-  },
+  "name": "fingerprint",
+  "version": "1.0.0",
+  "description": "[![](https://travis-ci.org/Valve/fingerprintjs2.svg?branch=master)](https://travis-ci.org/Valve/fingerprintjs2) [![](https://badges.gitter.im/Valve/fingerprintjs2.svg)](https://gitter.im/Valve/fingerprintjs2)",
+  "main": "index.js",
   "scripts": {
-    "test": "specs/phantomjs.runner.sh specs/spec_runner.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Valve/fingerprintjs2.git"
+    "url": "git+https://github.com/elaineo/fingerprintjs2.git"
   },
-  "keywords": [
-    "browser",
-    "identification",
-    "fingerprint",
-    "fingerprinting",
-    "privacy"
-  ],
-  "author": "Valentin Vasilyev",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Valve/fingerprintjs2/issues"
+    "url": "https://github.com/elaineo/fingerprintjs2/issues"
   },
-  "homepage": "https://github.com/Valve/fingerprintjs2"
+  "homepage": "https://github.com/elaineo/fingerprintjs2#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  }
 }
