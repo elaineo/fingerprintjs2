@@ -88,6 +88,16 @@
         for (c=0; c<components.length; c++) {
           $("#details").append(components[c].key + ":  <span class='label'>" + JSON.stringify(components[c].value) + "</span><br>");
         }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({'components': components, 'fingerprint': result}),
+            url: '/print',
+            success: function(data) {
+              console.log(data);
+            }
+        });
       });
     });
   </script>

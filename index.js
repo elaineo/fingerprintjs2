@@ -24,12 +24,12 @@ app.get('/', function(req, res){
 app.post('/print', function(req, res){
   console.log(req.body);
 
-  var headers = req.getAllResponseHeaders().toLowerCase();
-  console.log(headers);
+  var data = req.body;
+  data["headers"] = req.headers;
+  data["ip"] = req.connection.remoteAddress;
 
-  fs.appendFile('logs.txt', req.body, function (err) {
+  fs.appendFile('logs.txt', JSON.stringify(data), function (err) {
     if (err) throw err;
-    console.log('The "data to append" was appended to file!');
   });
 
 });
