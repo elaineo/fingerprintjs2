@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
@@ -11,7 +12,7 @@ app.engine('html', require('ejs').renderFile);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(cors());
 
 app.get('/', function(req, res){
   var headers = req.headers;
